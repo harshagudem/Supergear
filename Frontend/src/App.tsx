@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Header from "./Componenets/Header";
+import Footer from "./Componenets/Footer";
+import Container from "./Componenets/Container"
 
 function App() {
 
   return (
-    <>
-      <h1>hi</h1>
-    </>
+    <main>
+      <Header/>
+      {/* <Container>
+      <p>Ecommers Demo</p>
+      </Container> */}
+      <Footer/>
+    </main>
   )
 }
 
