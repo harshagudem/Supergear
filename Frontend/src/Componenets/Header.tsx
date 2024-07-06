@@ -38,10 +38,10 @@ function Header() {
       }
     };
     fetchData();
-  });
+  },[]);
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white md:sticky md:top-0 z-50">
       <div className="max-w-screen-xl mx-auto h-8 flex item-center justify-between px-4 lg:px-0 mt-5">
         <Link to={"/"}>
           <img src={logo} alt="logo" className="w-44" />
@@ -122,7 +122,8 @@ function Header() {
               className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:textWhite dutaion-200 relative overflow-hidden group "
             >
               {title}
-              <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300" />
+              {/* <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300" /> */}
+              <span className="absolute bottom-0 left-0 w-full block h-[1px] bg-white -translate-x-[100%] group-hover:translate-x-0 duration-300" />
             </Link>
           ))}
         </div>
