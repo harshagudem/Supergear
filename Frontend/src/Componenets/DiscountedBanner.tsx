@@ -11,7 +11,7 @@ function DiscountedBanner() {
         { title: "Audio", link: "tvAndAudio" },
         { title: "Laptop & Computers", link: "computersAndLaptop" },
         { title: "Cell Phone", link: "cellPhones" },
-      ];
+];
   return (
     <div>
         <div>
