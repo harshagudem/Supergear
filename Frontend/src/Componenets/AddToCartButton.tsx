@@ -6,8 +6,6 @@ interface Props{
     className? :string,
     title?:string
     product?:ProductProps
-
-    
 }
 
 function AddToCartButton({className,title} :Props) {
