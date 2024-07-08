@@ -8,7 +8,7 @@ import { RotatingLines } from 'react-loader-spinner';
 
 function CategoryFilters({id}:{id:string|undefined}) {
     const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         const fetchData = async () => {
           const endpoint = `${config?.baseUrl}categories`;
@@ -23,7 +23,7 @@ function CategoryFilters({id}:{id:string|undefined}) {
         };
         fetchData();
       },[]);
-  return (
+return (
     <div className="hidden md:inline-flex flex-col gap-6">
       <p className="text-3xl font-bold">Filters</p>
       <div>
