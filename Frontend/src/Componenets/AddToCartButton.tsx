@@ -1,9 +1,11 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
+import { ProductProps } from '../../type'
 
 interface Props{
     className? :string,
     title?:string
+    product?:ProductProps
 
     
 }

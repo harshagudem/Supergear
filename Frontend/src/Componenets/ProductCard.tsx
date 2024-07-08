@@ -6,6 +6,7 @@ import AddToCartButton from './AddToCartButton'
 import { Button, Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
 import FormattedPrice from './FormattedPrice'
 import ProductCartSideNAv from './ProductCartSideNAv'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {
   item:ProductProps
@@ -13,6 +14,7 @@ interface Props {
 
 function ProductCard({item}:Props) {
   const [isOpen,setIsOpen] = useState(false)
+  const navigate= useNavigate()
   const open = () =>{
     setIsOpen(true)
   }
@@ -20,11 +22,16 @@ function ProductCard({item}:Props) {
     setIsOpen(false)
   }
   const precentage = ((item?.regularPrice - item?.discountedPrice)/item?.regularPrice)*100
+
+  const handelProduct = ()=>{
+    navigate(`/product/${item?._id}`)
+
+  }
   return (
     <div className='border border-gray-200  rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer'>
       <div className='w-full h-60 relative p-2 group '>
       <span onClick = {open}className='bg-black text-skyText absolute left-0 right-0 w-16 text-xs text-center py-1 rounded-md font-semibold inline-block z-10'>save {precentage.toFixed(0)}%</span>
-      <img src={item?.images[0]} alt="productImage" className='w-full h-full rounded:md object-covergroup-hover:scale-110 duration-300' />
+      <img onClick={handelProduct} src={item?.images[0]} alt="productImage" className='w-full h-full rounded:md object-covergroup-hover:scale-110 duration-300' />
       <ProductCartSideNAv/>
       </div>
       <div className='flex flex-col gap-2 px-2 pb-2'>

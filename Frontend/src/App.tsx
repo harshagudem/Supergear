@@ -7,6 +7,7 @@ import Categoties from './Componenets/Categoties';
 import ProductList from './Componenets/ProductList';
 import { DiSafari } from 'react-icons/di';
 import DiscountedBanner from './Componenets/DiscountedBanner';
+import Blog from './Componenets/Blog';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Categoties/>
       <ProductList/>
       <DiscountedBanner/>
+      <Blog/>
     </main>
   )
 }
