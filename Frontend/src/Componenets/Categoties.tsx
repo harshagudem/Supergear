@@ -8,8 +8,8 @@ import { CategoryProps } from '../../type';
 function Categoties() {
     const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
+    useEffect(() => {
+      const fetchData = async () => {
       const endpoint = `${config?.baseUrl}categories`;
       try {
         const data = await getData(endpoint);
