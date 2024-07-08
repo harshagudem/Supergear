@@ -7,8 +7,8 @@ import { BlogProps } from '../../type';
 function Blog() {
     const [blogsData, setBlogsData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
+    useEffect(() => {
+      const fetchData = async () => {
       const endpoint = `${config?.baseUrl}blogs`;
       try {
         const data = await getData(endpoint);
